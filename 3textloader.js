@@ -7691,9 +7691,6 @@ function generateHtml(textObj) {
 </script>
     <script>
     var tl = new TimelineMax({
-        onUpdate: () => {
-          // TODO
-        },
         repeat: -1
       });
       var dots = document.getElementsByClassName('dot');
@@ -7705,7 +7702,6 @@ function generateHtml(textObj) {
       function initialLoader() {
         TweenLite.set([$n, $x, $xx, $p], { autoAlpha: 0 });
         tl = new TimelineMax({
-          onUpdate: () => {},
           repeat: -1
         });
         tl.add(getDotsWaveTl())

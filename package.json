@@ -1,6 +1,6 @@
 {
   "name": "3textloader",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "3 Text Loader to publish a node package to npmjs.com",
   "main": "3Textloader.js",
   "scripts": {},
