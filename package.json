@@ -1,6 +1,6 @@
 {
   "name": "3textloader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "3 Text Loader to publish a node package to npmjs.com",
   "main": "3Textloader.js",
   "scripts": {},
@@ -18,8 +18,5 @@
     "url": "https://github.com/ryangek/3textloader/issuess"
   },
   "homepage": "https://github.com/ryangek/3textloader/blob/master/README.md",
-  "devDependencies": {},
-  "dependencies": {
-    "jsdom": "^16.2.0"
-  }
+  "devDependencies": {}
 }
