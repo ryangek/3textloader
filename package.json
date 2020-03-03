@@ -1,8 +1,8 @@
 {
-  "name": "threetextloader",
-  "version": "1.0.0",
+  "name": "3textloader",
+  "version": "1.0.2",
   "description": "3 Text Loader to publish a node package to npmjs.com",
-  "main": "src/threetextloader.js",
+  "main": "3Textloader.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -10,8 +10,7 @@
   },
   "keywords": [
     "npm",
-    "3 Text Loader",
-    "Three Text Loader"
+    "3 Text Loader"
   ],
   "author": "ryangek",
   "license": "MIT",
@@ -19,5 +18,8 @@
     "url": "https://github.com/ryangek/3textloader/issuess"
   },
   "homepage": "https://github.com/ryangek/3textloader/blob/master/README.md",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "jsdom": "^16.2.0"
+  }
 }
