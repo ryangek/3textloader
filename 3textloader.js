@@ -1,6 +1,6 @@
 function generateHtml(textObj) {
-  return `
-    <svg
+  const svg = `
+  <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -70,6 +70,9 @@ function generateHtml(textObj) {
         />
       </g>
     </svg>
+  `;
+  return `
+  ${svg}
     <script>
   /*!
    * VERSION: 2.1.2
@@ -7868,12 +7871,18 @@ function generateHtml(textObj) {
       }
 
       initialLoader();
+
+      window.onbeforeunload = closingCode;
+      function closingCode(){
+        tl = null;
+        return null;
+      }
     </script>
     `;
 }
 
-function createLoader(
-  textObj = {
+function createLoader(textObj) {
+  let obj = {
     A: {
       text: 'A',
       colorText: 'rgba(252,179,22, 1)',
@@ -7893,9 +7902,39 @@ function createLoader(
       colorBall: 'rgba(170,193,69, 1)'
     },
     id: 'NXPLogo'
+  };
+  if (textObj) {
+    Object.keys(textObj).map(key => {
+      if (typeof obj[key] === 'object') {
+        obj[key] = Object.assign(obj[key], textObj[key]);
+      } else {
+        obj[key] = textObj[key];
+      }
+    });
+  } else {
+    obj = {
+      A: {
+        text: 'A',
+        colorText: 'rgba(252,179,22, 1)',
+        colorTextFade: 'rgba(252,179,22, 1)',
+        colorBall: 'rgba(252,179,22, 1)'
+      },
+      B: {
+        text: 'B',
+        colorText: 'rgba(109, 172, 222, 0.6)',
+        colorTextFade: 'rgba(109, 172, 222, 1)',
+        colorBall: 'rgba(109, 172, 222, 1)'
+      },
+      C: {
+        text: 'C',
+        colorText: 'rgba(170,193,69, 1)',
+        colorTextFade: 'rgba(170,193,69, 1)',
+        colorBall: 'rgba(170,193,69, 1)'
+      },
+      id: 'NXPLogo'
+    };
   }
-) {
-  return generateHtml(textObj);
+  return generateHtml(obj);
 }
 
 module.exports = { createLoader };

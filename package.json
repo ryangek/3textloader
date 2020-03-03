@@ -1,6 +1,6 @@
 {
   "name": "3textloader",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "3 Text Loader to publish a node package to npmjs.com",
   "main": "3Textloader.js",
   "scripts": {},
@@ -10,7 +10,8 @@
   },
   "keywords": [
     "npm",
-    "3 Text Loader"
+    "ejs",
+    "3 Text Loader for EJS"
   ],
   "author": "ryangek",
   "license": "MIT",
